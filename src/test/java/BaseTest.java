@@ -36,7 +36,7 @@ public class BaseTest {
         mainPageObj = new MainPage(driver);
         loginPageObj = new LoginPage(driver);
         registerPageObj = new RegisterPage(driver);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7)); // при запуске всех тестов сразу без ожидания эл-ты иногда не успевают подгрузиться
     }
 
     @After

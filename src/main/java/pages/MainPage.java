@@ -63,4 +63,5 @@ public class MainPage {
     public boolean isFillingsActiveEnabled() {
         boolean isFillingsActive = driver.findElement(fillingsActive).isEnabled();
         return isFillingsActive;
-    }}
+    }
+}

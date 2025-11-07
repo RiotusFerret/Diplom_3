@@ -12,6 +12,7 @@ public class LoginTests extends BaseTest {
 
     @After
     public void cleanUp() {
+        usReq.userLogin(user);
         if (user.isCreated()) {
             usReq.userDelete(user);
         }
@@ -27,7 +28,7 @@ public class LoginTests extends BaseTest {
         loginPageObj.passwordAuthFieldInput(user.getPassword());
         loginPageObj.loginButtonClick();
          mainPageObj.personalCabinetButtonMainPageClick();
-        Assert.assertTrue(mainPageObj.profileIsVisible()); // возможность зайти в личный кабинет
+        Assert.assertTrue(mainPageObj.profileIsVisible());
     }
 
     @Test
@@ -40,7 +41,7 @@ public class LoginTests extends BaseTest {
         loginPageObj.passwordAuthFieldInput(user.getPassword());
         loginPageObj.loginButtonClick();
           mainPageObj.personalCabinetButtonMainPageClick();
-        Assert.assertTrue(mainPageObj.profileIsVisible()); // возможность зайти в личный кабинет
+        Assert.assertTrue(mainPageObj.profileIsVisible());
     }
 
     @Test
@@ -55,7 +56,7 @@ public class LoginTests extends BaseTest {
         loginPageObj.passwordAuthFieldInput(user.getPassword());
         loginPageObj.loginButtonClick();
         mainPageObj.personalCabinetButtonMainPageClick();
-        Assert.assertTrue(mainPageObj.profileIsVisible()); // возможность зайти в личный кабинет
+        Assert.assertTrue(mainPageObj.profileIsVisible());
     }
 
     @Test
@@ -70,6 +71,6 @@ public class LoginTests extends BaseTest {
         loginPageObj.passwordAuthFieldInput(user.getPassword());
         loginPageObj.loginButtonClick();
         mainPageObj.personalCabinetButtonMainPageClick();
-        Assert.assertTrue(mainPageObj.profileIsVisible()); // возможность зайти в личный кабинет
+        Assert.assertTrue(mainPageObj.profileIsVisible());
     }
 }

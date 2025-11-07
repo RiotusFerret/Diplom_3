@@ -28,7 +28,7 @@ public class RegisterTests extends BaseTest {
       registerPageObj.emailFieldInput(user.getEmail());
       registerPageObj.passwordFieldInput(user.getPassword());
       registerPageObj.registerButtonClick();
-      Assert.assertTrue(loginPageObj.ifLoginButtonIsVisible()); //
+      Assert.assertTrue(loginPageObj.ifLoginButtonIsVisible());
     }
 
     @Test

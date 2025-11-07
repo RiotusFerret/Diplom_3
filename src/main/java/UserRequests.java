@@ -3,8 +3,6 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import static constants.URLs.*;
-import static io.restassured.path.json.JsonPath.given;
-
 public class UserRequests {
     public Response userCreate(User user) {
         Response creationResponse =

@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
-    private WebDriver driver;
-    Boolean loginFormIsEnabled;
+    WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -15,13 +14,6 @@ public class LoginPage {
     private By registerButtonLoginPage = By.xpath(".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']/a[text()='Зарегистрироваться']");
     public void registerButtonLoginPageClick() {
         driver.findElement(registerButtonLoginPage).click();
-    }
-
-    // проверка успешности регистрации
-    private By authForm = By.xpath(".//form[@class='Auth_form__3qKeq mb-20']");
-    public boolean enterHeaderVisibilityCheck() {
-        loginFormIsEnabled = driver.findElement(authForm).isEnabled();
-        return loginFormIsEnabled;
     }
 
     // поле "Email"
@@ -55,7 +47,6 @@ public class LoginPage {
     private By loginButtonForgotPasswordPage = By.xpath(".//a[text()='Войти']");
     public void loginButtonForgotPasswordPageClick() {
         driver.findElement(loginButtonForgotPasswordPage).click();
-
 
     }
 }
