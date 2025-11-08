@@ -1,4 +1,5 @@
 import io.qameta.allure.junit4.DisplayName;
+import io.restassured.response.Response;
 import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Assert;
@@ -13,6 +14,8 @@ public class RegisterTests extends BaseTest {
 
     @After
     public void cleanUp() {
+        Response loginResponse = usReq.userLogin(user);
+        usReq.userGetToken(loginResponse, user);
         if (user.isCreated()) {
             usReq.userDelete(user);
         }
@@ -20,6 +23,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     @DisplayName("Успешная регистрация")
+    @Description("Регистрация и возврат на страницу авторизации")
     public void successfulRegistrationTest() {
       driver.get(HOME_PAGE);
       mainPageObj.loginButtonMainPageClick();
