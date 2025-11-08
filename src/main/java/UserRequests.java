@@ -21,7 +21,7 @@ public class UserRequests {
         return creationResponse;
     }
 
-    @Step("Получение токена доступа для удаления поль-ля после теста")
+    @Step("Получение токена для удаления пользователя после теста")
     public void userGetToken(Response response, User user) {
         if (response.getStatusCode() == SC_OK)  {
             user.setCreated(true);
